@@ -1,0 +1,9 @@
+Mia,08.07.1935,(keine Angabe),Bochum,Paul	,Albert Josef Gerhard und Wilhelm,
+Paul,10.10.1936,09.05.2001,Bochum,Mia	,Renate Karl-Heinz und Karin,
+Ulrich,26.09.1937,18.04.2009,Bochum,Hilde	,Werner und Gerlinde,
+Hilde,02.03.1939,(keine Angabe),Bochum,Ulrich	,Emil Hans und Ida,
+Elke,26.02.1961,(keine Angabe),Bochum,Thomas	,Peter,
+Thomas,26.05.1962,(keine Angabe),Bochum,Elke	,Petra,
+Sophie,10.09.1987,(keine Angabe),Bochum,(keine Angabe),Dean und Cedric,
+Dean,25.08.1996,(keine Angabe),Bochum,(keine Angabe),Sophie und Cedric,
+Cedric,04.01.1999,(keine Angabe),Bochum,(keine Angabe),Sophie und Dean

@@ -1,5 +1,6 @@
 /**
  *	Projekt geforked von https://github.com/bjoekeldude/fscanf
+ *	Projekt geforked von https://github.com/NP199/fscanf
  */
 
 #include <stdbool.h>
@@ -8,16 +9,18 @@
 #include <string.h>
 #include <unistd.h>
 
-char const* const VERSIONSNR = "0.1.2";
+char const* const VERSIONSNR = "0.1.3";
 
 int const DB_SIZE = 20;
 
 struct person
 {
-    int  personalnummer;
-    char nachname[20];
-    char vorname[20];
-    int  geburtsjahr;
+    char name[20];
+    char geburtstag[15];
+    char sterbe_tag[15];
+    char geburtsort[20];
+    char ehepartner[30];
+    char geschwister[30];
 };
 typedef struct person person_t;
 
@@ -33,19 +36,24 @@ void readcsv(char const* const datei)
         exit(2);
     }
     person_t database[DB_SIZE];
+    printf("\nName:		Geburtstag:		Sterbe Tag:		Geburtsort:		Ehepartner:		Geschwister:\n");
     while(fscanf(filepointer,
-                 "%d,%[^,],%[^,],%d",
-                 &database[zaehler].personalnummer,
-                 database[zaehler].nachname,
-                 database[zaehler].vorname,
-                 &database[zaehler].geburtsjahr)
+                 "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],",
+                 database[zaehler].name,
+                 database[zaehler].geburtstag,
+                 database[zaehler].sterbe_tag,
+		 database[zaehler].geburtsort,
+		 database[zaehler].ehepartner,
+		 database[zaehler].geschwister)
           != EOF)
-    {
-        printf("%d, %s, %s, %d \n",
-               database[zaehler].personalnummer,
-               database[zaehler].nachname,
-               database[zaehler].vorname,
-               database[zaehler].geburtsjahr);
+    {    
+        printf("\n%s		%s		%s		%s			%s		%s\n",
+                 database[zaehler].name,
+                 database[zaehler].geburtstag,
+                 database[zaehler].sterbe_tag,
+                 database[zaehler].geburtsort,
+                 database[zaehler].ehepartner,
+                 database[zaehler].geschwister);
         zaehler++;
         if(zaehler == DB_SIZE)
         {
